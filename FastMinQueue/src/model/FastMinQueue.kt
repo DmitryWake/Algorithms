@@ -1,3 +1,5 @@
+package model
+
 class FastMinQueue : BaseStructure<Double> {
 
     private val pairStack = Pair(FastMinStack(), FastMinStack())

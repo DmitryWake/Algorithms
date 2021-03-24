@@ -1,3 +1,5 @@
+package model
+
 interface BaseStructure<T> {
     fun insert(elem: T)
     fun delete(): T
