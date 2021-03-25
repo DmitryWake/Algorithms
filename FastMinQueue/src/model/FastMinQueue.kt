@@ -1,14 +1,14 @@
 package model
 
-class FastMinQueue : BaseStructure<Double> {
+class FastMinQueue : BaseStructure<Long> {
 
     private val pairStack = Pair(FastMinStack(), FastMinStack())
 
-    override fun insert(elem: Double) {
+    override fun insert(elem: Long) {
         pairStack.first.insert(elem)
     }
 
-    override fun delete(): Double {
+    override fun delete(): Long {
         if (pairStack.second.isEmpty()) {
             while (!pairStack.first.isEmpty()) {
                 val elem = pairStack.first.delete()
@@ -18,7 +18,13 @@ class FastMinQueue : BaseStructure<Double> {
         return pairStack.second.delete()
     }
 
-    override fun findMin(): Double = minOf(pairStack.first.findMin(), pairStack.second.findMin())
+    override fun findMin(): Long = if (!pairStack.first.isEmpty() && !pairStack.second.isEmpty()) {
+        minOf(pairStack.first.findMin(), pairStack.second.findMin())
+    } else if (!pairStack.first.isEmpty()) {
+        pairStack.first.findMin()
+    } else {
+        pairStack.second.findMin()
+    }
 
     override fun isEmpty(): Boolean = pairStack.first.isEmpty() && pairStack.second.isEmpty()
 

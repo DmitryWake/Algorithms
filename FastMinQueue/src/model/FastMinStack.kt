@@ -2,11 +2,11 @@ package model
 
 import java.util.*
 
-class FastMinStack : BaseStructure<Double> {
+class FastMinStack : BaseStructure<Long> {
 
-    private val stack: Stack<Pair<Double, Double>> = Stack()
+    private val stack: Stack<Pair<Long, Long>> = Stack()
 
-    override fun insert(elem: Double) {
+    override fun insert(elem: Long) {
         val min = if (stack.isEmpty()) {
             elem
         } else {
@@ -15,9 +15,9 @@ class FastMinStack : BaseStructure<Double> {
         stack.push(Pair(elem, min))
     }
 
-    override fun delete(): Double = stack.pop().first
+    override fun delete(): Long = stack.pop().first
 
-    override fun findMin(): Double = stack.peek().second
+    override fun findMin(): Long = stack.peek().second
 
     override fun isEmpty(): Boolean = stack.isEmpty()
 
