@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Algorithms.iml" filepath="$PROJECT_DIR$/.idea/Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/FastMinQueue/FastMinQueue.iml" filepath="$PROJECT_DIR$/FastMinQueue/FastMinQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/MergeSort/MergeSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuickSortKiller/QuickSortKiller.iml" filepath="$PROJECT_DIR$/QuickSortKiller/QuickSortKiller.iml" />
     </modules>
   </component>
