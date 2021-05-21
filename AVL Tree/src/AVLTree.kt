@@ -12,19 +12,25 @@ class AVLTree : Tree {
     }
 
     override fun search(data: Int): Boolean {
-        if (root == null) {
+        return search(data, root)
+    }
+
+    private fun search(data: Int, node: Node?): Boolean {
+        if (node == null) {
             return false
-        } else {
-            var currentRoot = root
-            while (true) {
-                if (currentRoot!!.data == data) return true
-                currentRoot = if (currentRoot.leftNode != null && currentRoot.leftNode!!.data >= data) {
-                    currentRoot.leftNode
-                } else if (currentRoot.rightNode != null && currentRoot.rightNode!!.data <= data) {
-                    currentRoot.rightNode
-                } else {
-                    return false
-                }
+        }
+        return when {
+            data < node.data -> {
+                search(data, node.leftNode)
+            }
+            data > node.data -> {
+                search(data, node.rightNode)
+            }
+            data == node.data -> {
+                true
+            }
+            else -> {
+                false
             }
         }
     }
@@ -33,10 +39,16 @@ class AVLTree : Tree {
         if (node == null) {
             return Node(data)
         }
-        if (data < node.data) {
-            node.leftNode = insert(node.leftNode, data)
-        } else {
-            node.rightNode = insert(node.rightNode, data)
+        when {
+            data < node.data -> {
+                node.leftNode = insert(node.leftNode, data)
+            }
+            data > node.data -> {
+                node.rightNode = insert(node.rightNode, data)
+            }
+            else -> {
+                return node
+            }
         }
         node.height = max(height(node.leftNode), height(node.rightNode)) + 1
         return checkBalanceAndRotate(data, node)
