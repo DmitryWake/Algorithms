@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AVL Tree/AVL Tree.iml" filepath="$PROJECT_DIR$/AVL Tree/AVL Tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Algorithms.iml" filepath="$PROJECT_DIR$/.idea/Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/FastMinQueue/FastMinQueue.iml" filepath="$PROJECT_DIR$/FastMinQueue/FastMinQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTable/HashTable.iml" filepath="$PROJECT_DIR$/HashTable/HashTable.iml" />
       <module fileurl="file://$PROJECT_DIR$/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/MergeSort/MergeSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuickSortKiller/QuickSortKiller.iml" filepath="$PROJECT_DIR$/QuickSortKiller/QuickSortKiller.iml" />
       <module fileurl="file://$PROJECT_DIR$/RadixSort/RadixSort.iml" filepath="$PROJECT_DIR$/RadixSort/RadixSort.iml" />
