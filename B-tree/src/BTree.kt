@@ -9,6 +9,12 @@ class BTree(private var MinDeg: Int) {
         return root?.search(key) != null
     }
 
+    fun rootCount(): Int = root?.count ?: 0
+
+    fun rootElements(): IntArray {
+        return root?.getElements() ?: intArrayOf()
+    }
+
     /**
      * Вставка ключа в дерево
      */

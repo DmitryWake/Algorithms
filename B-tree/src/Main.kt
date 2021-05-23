@@ -22,10 +22,24 @@ fun main() {
             '+' -> {
                 val x = line.split(' ').last().toInt()
                 tree.insert(x)
+                fileOutputWriter.write(tree.rootCount().toString())
+                fileOutputWriter.append(' ')
+                tree.rootElements().forEach {
+                    fileOutputWriter.write(it.toString())
+                    fileOutputWriter.append(' ')
+                }
+                fileOutputWriter.appendLine()
             }
             '-' -> {
                 val x = line.split(' ').last().toInt()
                 tree.remove(x)
+                fileOutputWriter.write(tree.rootCount().toString())
+                fileOutputWriter.append(' ')
+                tree.rootElements().forEach {
+                    fileOutputWriter.write(it.toString())
+                    fileOutputWriter.append(' ')
+                }
+                fileOutputWriter.appendLine()
             }
             '?' -> {
                 val x = line.split(' ').last().toInt()

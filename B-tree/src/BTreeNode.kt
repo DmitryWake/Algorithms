@@ -8,6 +8,10 @@ class BTreeNode(private var minDegree: Int, var isLeaf: Boolean) {
      */
     var count: Int = 0
 
+    fun getElements(): IntArray {
+        return keys.copyOf(count)
+    }
+
     /**
      * Удаление ключа из узла
      */
